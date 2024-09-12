@@ -1,0 +1,75 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2312                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      fvSchemes;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+ddtSchemes
+{
+    default         CrankNicolson 0.9;
+}
+
+gradSchemes
+{
+    default         Gauss linear;
+}
+
+divSchemes
+{
+    default             none;    
+    div(rhoPhi,U)       Gauss linearUpwind grad(U);
+    div(phi,alpha)      Gauss interfaceCompression vanLeer 1;
+    div(phirb,alpha)    Gauss interfaceCompression;
+//    div(phi,R)          Gauss linearUpwind grad(R);
+//    div(R)              Gauss linear;
+    div(phi,nuTilda)    Gauss linearUpwind grad(phi);
+//    div((muEff*dev(T(grad(U)))))        Gauss linear;
+    div(((rho*nuEff)*dev2(T(grad(U))))) Gauss linear;
+//    div(rhoPhi,epsilon) Gauss upwind;
+//    "div\(phi,(k|omega)\)"      Gauss upwind;
+    div(phi,k)          Gauss linearUpwind grad(k);
+    div(phi,omega)      Gauss linearUpwind grad(omega);
+    div(rhoPhi,k)       Gauss linearUpwind grad(k);
+}
+
+
+laplacianSchemes
+{
+    default         Gauss linear orthogonal;
+}
+
+interpolationSchemes
+{
+    default         linear;
+}
+
+snGradSchemes
+{
+    default         orthogonal;
+}
+
+fluxRequired
+{
+    default         no;
+    p_rgh;
+    pcorr;
+    alpha;
+}
+
+wallDist
+{
+    method          meshWave;
+}
+
+
+// ************************************************************************* //
