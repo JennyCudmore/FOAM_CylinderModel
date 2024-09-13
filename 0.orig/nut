@@ -45,6 +45,14 @@ boundaryField
         value           uniform 0;
     }
 
+
+    cylinder
+    {
+        type            nutkWallFunction;
+        value           uniform 0;
+    }
+
+
     leftwall
     {
         type            calculated;

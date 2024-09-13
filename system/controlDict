@@ -22,7 +22,9 @@ startTime       0;
 
 stopAt          endTime;
 
-endTime         10;
+
+endTime         5;
+
 
 deltaT          0.005;
 
@@ -162,4 +164,8 @@ functions
    }
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 42db86b (version with one row of cylinders, but bad cells)
 // ************************************************************************* /

@@ -56,6 +56,14 @@ boundaryField
         value           uniform 0;
     }
 
+
+    cylinder
+    {
+        type            fixedFluxPressure;
+        value           uniform 0;
+    }
+
+
     top
     {
         type            totalPressure;

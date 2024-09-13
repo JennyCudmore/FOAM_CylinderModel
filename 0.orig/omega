@@ -44,6 +44,14 @@ boundaryField
         value           $internalField;
     }
 
+
+    cylinder
+    {
+        type            omegaWallFunction;
+        value           $internalField;
+    }
+
+
     leftwall
     {
         type            fixedValue;

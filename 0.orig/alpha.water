@@ -51,6 +51,12 @@ boundaryField
         type            zeroGradient;
     }
 
+
+    cylinder
+    {
+        type            zeroGradient;
+    }
+
     top
     {
         type            inletOutlet;

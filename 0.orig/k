@@ -44,10 +44,17 @@ boundaryField
         value           uniform 0.1;
     }
 
+
     leftwall
     {
         type            fixedValue;
         value           uniform 0.03;
+    }
+
+    cylinder
+    {
+        type            kqRWallFunction;
+        value           uniform 0.1;
     }
 
 

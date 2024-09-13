@@ -49,6 +49,12 @@ boundaryField
         type            noSlip;
     }
 
+
+    cylinder
+    {
+        type            noSlip;
+    }
+
     rightwall
     {
         type            waveVelocity;
