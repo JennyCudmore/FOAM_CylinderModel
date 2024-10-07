@@ -35,9 +35,5 @@ Allclean
 *.foam
 constant/polyMesh
 processor*
+myjobscript.job
 
-<<<<<<< HEAD
-
-=======
-processor*
->>>>>>> 42db86b (version with one row of cylinders, but bad cells)
