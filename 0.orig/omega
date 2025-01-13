@@ -45,11 +45,18 @@ boundaryField
     }
 
 
-    cylinder
+    cylinder1
     {
         type            omegaWallFunction;
         value           $internalField;
     }
+
+    cylinder2
+    {
+        type            omegaWallFunction;
+        value           $internalField;
+    }
+
 
 
     leftwall

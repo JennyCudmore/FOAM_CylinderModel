@@ -51,11 +51,18 @@ boundaryField
         value           uniform 0.03;
     }
 
-    cylinder
+    cylinder1
     {
         type            kqRWallFunction;
         value           uniform 0.1;
     }
+
+    cylinder2
+    {
+        type            kqRWallFunction;
+        value           uniform 0.1;
+    }
+
 
 
 
