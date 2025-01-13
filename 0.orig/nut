@@ -46,11 +46,18 @@ boundaryField
     }
 
 
-    cylinder
+    cylinder1
     {
         type            nutkWallFunction;
         value           uniform 0;
     }
+
+    cylinder2
+    {
+        type            nutkWallFunction;
+        value           uniform 0;
+    }
+
 
 
     leftwall

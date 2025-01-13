@@ -1,7 +1,7 @@
 /*--------------------------------*- C++ -*----------------------------------*\
 | =========                 |                                                 |
 | \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
-|  \\    /   O peration     | Version:  v2312                                 |
+|  \\    /   O peration     | Version:  v2306                                 |
 |   \\  /    A nd           | Website:  www.openfoam.com                      |
 |    \\/     M anipulation  |                                                 |
 \*---------------------------------------------------------------------------*/
@@ -10,22 +10,15 @@ FoamFile
     version     2.0;
     format      ascii;
     class       dictionary;
-    object      decomposeParDict;
+    object      meshQualityDict;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
+// Include defaults parameters from master dictionary
+#includeEtc "caseDicts/meshQualityDict"
 
-numberOfSubdomains 90;
-
-
-method          simple;
-
-coeffs
-{
-
-    n           (15 3 2);
-
-}
+//- minFaceWeight (0 -> 0.5)
+minFaceWeight 0.02;
 
 
 // ************************************************************************* //

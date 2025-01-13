@@ -57,11 +57,18 @@ boundaryField
     }
 
 
-    cylinder
+    cylinder1
     {
         type            fixedFluxPressure;
         value           uniform 0;
     }
+
+    cylinder2
+    {
+        type            fixedFluxPressure;
+        value           uniform 0;
+    }
+
 
 
     top

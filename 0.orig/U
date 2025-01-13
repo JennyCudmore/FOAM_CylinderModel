@@ -50,7 +50,12 @@ boundaryField
     }
 
 
-    cylinder
+    cylinder1
+    {
+        type            noSlip;
+    }
+
+    cylinder2
     {
         type            noSlip;
     }

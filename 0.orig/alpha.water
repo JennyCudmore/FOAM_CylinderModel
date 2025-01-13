@@ -52,7 +52,12 @@ boundaryField
     }
 
 
-    cylinder
+    cylinder1
+    {
+        type            zeroGradient;
+    }
+
+    cylinder2
     {
         type            zeroGradient;
     }
