@@ -23,7 +23,7 @@ method          simple;
 coeffs
 {
 
-    n           (15 3 2);
+    n           (30 1 3);
 
 }
 
