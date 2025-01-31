@@ -16,51 +16,51 @@ FoamFile
 
 dimensions      [0 2 -2 0 0 0 0];
 
-internalField   uniform 0.1;
+internalField   uniform 0.0003;
 
 boundaryField
 {
     bottom1
     {
         type            kqRWallFunction;
-        value           uniform 0.1;
+  //      value           uniform 0.1;
     }
 
     bottom2
     {
         type            kqRWallFunction;
-        value           uniform 0.1;
+  //      value           uniform 0.1;
     }
 
     front
     {
         type            kqRWallFunction;
-        value           uniform 0.1;
+  //      value           uniform 0.1;
     }
 
     back
     {
         type            kqRWallFunction;
-        value           uniform 0.1;
+  //      value           uniform 0.1;
     }
 
 
     leftwall
     {
         type            fixedValue;
-        value           uniform 0.03;
+        value           uniform 0.0003;
     }
 
     cylinder1
     {
         type            kqRWallFunction;
-        value           uniform 0.1;
+   //     value           uniform 0.1;
     }
 
     cylinder2
     {
         type            kqRWallFunction;
-        value           uniform 0.1;
+   //     value           uniform 0.1;
     }
 
 
