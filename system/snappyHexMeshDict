@@ -42,7 +42,6 @@ geometry
     }
 
 
-
  //   refinementBox //area which you want to refine inside the domain
  //   {
  //       type box;
@@ -69,6 +68,7 @@ castellatedMeshControls
     // Note that this is the number of cells before removing the part which
     // is not 'visible' from the keepPoint. The final number of cells might
     // actually be a lot less.
+
     maxGlobalCells 500000000; //should be much higher than maxLocalCells //////WAS INITIALLY 2000000, BUT HAD TOO MANY CELLS SO WASN'T REFINING
 
     // The surface refinement loop might spend lots of iterations refining just a
@@ -89,7 +89,7 @@ castellatedMeshControls
     // 1 means normal 2:1 refinement restriction, larger means slower
     // refinement.
 ////////////IMPORTANT
-    nCellsBetweenLevels 4; //see 31:00 in video - how many cells between fine and coarse mesh coming out from obj
+    nCellsBetweenLevels 2; //see 31:00 in video - how many cells between fine and coarse mesh coming out from obj
 
 
 
@@ -104,7 +104,6 @@ castellatedMeshControls
             file "cylinder1.eMesh";
             level 0; ///if we do this part, we refine more along the edges of the cylinder - smaller cells at edge
         }
-
         {
             file "cylinder2.eMesh";
             level 0; ///if we do this part, we refine more along the edges of the cylinder - smaller cells at edge
@@ -129,7 +128,7 @@ castellatedMeshControls
         cylinder1
         {
             // Surface-wise min and max refinement level////////////IMPORTANT
-            level (2 2); //min and max both 2. (2 2) Means that each cell surrounding the object is split into 16 - the coarse cells are split into 16 closest to the object
+            level (1 1); //min and max both 2. Means that each cell surrounding the object is split into 16 - the coarse cells are split into 16 closest to the object
 
             // Optional specification of patch type (default is wall). No
             // constraint types (cyclic, symmetry) etc. are allowed.
@@ -143,7 +142,7 @@ castellatedMeshControls
         cylinder2
         {
             // Surface-wise min and max refinement level////////////IMPORTANT
-            level (2 2); //min and max both 2. (2 2) Means that each cell surrounding the object is split into 16 - the coarse cells are split into 16 closest to the object
+            level (1 1); //min and max both 2. Means that each cell surrounding the object is split into 16 - the coarse cells are split into 16 closest to the object
 
             // Optional specification of patch type (default is wall). No
             // constraint types (cyclic, symmetry) etc. are allowed.
@@ -153,7 +152,6 @@ castellatedMeshControls
           //      inGroups (motorBikeGroup);
           //  }
         }
-
 
 
 
